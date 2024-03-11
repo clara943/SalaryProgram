@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class AllPermanentWorker {
+public class AllWorker {
 
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		AllPermanentWorker allPWorker = new AllPermanentWorker();
+		PermanentManagement pManagement = new PermanentManagement();
 		int num;
 
 		while (true) {
@@ -13,15 +13,15 @@ public class AllPermanentWorker {
 			num = sc.nextInt();
 
 			if (num == 1) {
-				allPWorker.input();
+				pManagement.input();
 			} else if (num == 2) {
-				allPWorker.modify();
+				pManagement.modify();
 			} else if (num == 3) {
-				allPWorker.delete();
+				pManagement.delete();
 			} else if (num == 4) {
-				allPWorker.search();
+				pManagement.search();
 			} else if (num == 5) {
-				allPWorker.printAll();
+				pManagement.printAll();
 			} else if (num == 6) {
 				break;
 			} else {

@@ -2,9 +2,8 @@
 public class PSalary {
 
 	SalaryCal base;
-	SalaryCal add;
-	SalaryCal deduct;
-
+	double add;
+	double deduct;
 	JobGrade percent;
 
 	double total;
@@ -13,8 +12,6 @@ public class PSalary {
 
 	public PSalary() {
 		base = new SalaryCal();
-		add = new SalaryCal();
-		deduct = new SalaryCal();
 		percent = new JobGrade();
 	}
 
@@ -22,23 +19,25 @@ public class PSalary {
 		return base;
 	}
 
-	public void setBase(SalaryCal base) {
-		this.base = base;
+	public void setBase(double base) {
+		this.base.setSalaryCal(base);
 	}
 
-	public SalaryCal getAdd() {
-		return add;
+
+	public double getAdd() {
+		return (getBase().getSalaryCal() * getPercent().getPercent());
 	}
 
-	public void setAdd(SalaryCal add) {
-		this.add = add;
+	public double getDeduct() {
+		int union = 0;
+		if (union == 1) {
+			return 50000;
+		} else
+			return 0;
+
 	}
 
-	public SalaryCal getDeduct() {
-		return deduct;
-	}
-
-	public void setDeduct(SalaryCal deduct) {
+	public void setDeduct(double deduct) {
 		this.deduct = deduct;
 	}
 
@@ -59,7 +58,7 @@ public class PSalary {
 	}
 
 	public double getSum() {
-		return (getBase().getSalaryCal() * getPercent().getPercent()) + getAdd().getSalaryCal() - getDeduct().getSalaryCal();
+		return getBase().getSalaryCal() + getAdd() - getDeduct();
 	}
 
 }

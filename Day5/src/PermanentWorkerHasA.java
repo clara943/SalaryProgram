@@ -1,6 +1,10 @@
 
-public class PermanentWorker {
-
+/**
+ * 정규직 관리?
+ */
+public class PermanentWorkerHasA {
+	
+	
 	private String name;
 	private int age;
 	private int employeeNumber;
@@ -10,14 +14,29 @@ public class PermanentWorker {
 	private String bank;
 	private int accountNumber;
 	private int jobGrade;
-	private boolean union;
-
-	public int getemployeeNumber() {
-		return employeeNumber;
+	private int union;
+	PSalary base;
+	PSalary add;
+	PSalary deduct;
+	PSalary total;
+	
+	public PermanentWorkerHasA() {
+		
 	}
+	
 
-	public void setemployeeNumber(int employeeNumber) {
+	public PermanentWorkerHasA(String name, int age, int employeeNumber, int birthDate, String address, int phoneNumber,
+			String bank, int accountNumber, int jobGrade, int union) {
+		this.name = name;
+		this.age = age;
 		this.employeeNumber = employeeNumber;
+		this.birthDate = birthDate;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
+		this.bank = bank;
+		this.accountNumber = accountNumber;
+		this.jobGrade = jobGrade;
+		this.union = union;
 	}
 
 	public String getName() {
@@ -34,6 +53,14 @@ public class PermanentWorker {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public int getEmployeeNumber() {
+		return employeeNumber;
+	}
+
+	public void setEmployeeNumber(int employeeNumber) {
+		this.employeeNumber = employeeNumber;
 	}
 
 	public int getBirthDate() {
@@ -84,12 +111,24 @@ public class PermanentWorker {
 		this.jobGrade = jobGrade;
 	}
 
-	public boolean isUnion() {
+	public int Union() {
 		return union;
 	}
 
-	public void setUnion(boolean union) {
+	public void setUnion(int union) {
 		this.union = union;
 	}
+
+	
+	public PSalary getTotal() {
+		return total;
+	}
+
+	public void setTotal(PSalary total) {
+		this.total = total;
+	}
+
+
+	
 
 }

@@ -3,6 +3,7 @@ public class TemporaryWorker {
 
 	private String name;
 	private int age;
+	private int employeeNumber;
 	private int birthDate;
 	private String address;
 	private int phoneNumber;
@@ -10,6 +11,14 @@ public class TemporaryWorker {
 	private int accountNumber;
 	private int contractPeriod;
 	private int resignationDate;
+
+	public int getemployeeNumber() {
+		return employeeNumber;
+	}
+
+	public void setemployeeNumber(int employeeNumber) {
+		this.employeeNumber = employeeNumber;
+	}
 
 	public String getName() {
 		return name;

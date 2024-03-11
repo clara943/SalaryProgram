@@ -1,13 +1,13 @@
 
 public class SalaryCal {
 
-	private int salaryCal;
+	private double salaryCal;
 
-	public int getSalaryCal() {
+	public double getSalaryCal() {
 		return salaryCal;
 	}
 
-	public void setSalaryCal(int salaryCal) {
+	public void setSalaryCal(double salaryCal) {
 		this.salaryCal = salaryCal;
 	}
 
